@@ -34,13 +34,13 @@ public class Bits {
 	}
 	public String toString(){
 		String bits2 = "";
-		for(int k=0;k<bits.length-1;k++){
+		for(int k=0;k<bits.length;k++){
 			if(bits[k]==true){
-				bits2+="1,";
+				bits2+="1";
 			}
-			else{
+			else if(bits[k]==false){
 			
-				bits2+="0,";
+				bits2+="0";
 			}
 			
 		}
@@ -58,10 +58,14 @@ public class Bits {
 		return false;
 	}
 	public void and(boolean[]a)throws TamanhosDiferentesException{
-		if(a.length==this.bits.length){
+		if(!(a.length==this.bits.length)){
+			throw new TamanhosDiferentesException("Conjuntos com tamanhos diferentes, impossivel calcular");
+			
+		}
+		else{
 			boolean [] and = new boolean[a.length];
 			for(int k=0;k<a.length;k++){
-				if(a[k]==true && this.bits[k]==true){
+				if(a[k]==true && this.bits[k]==a[k]){
 					and[k]=true;
 				}
 				else{
@@ -70,11 +74,12 @@ public class Bits {
 			}
 			this.bits = and;
 		}
-		throw new TamanhosDiferentesException("Conjuntos com tamanhos diferentes, impossivel calcular");
-		
 	}
 	public void or(boolean[]a)throws TamanhosDiferentesException{
-		if(a.length==this.bits.length){
+		if(!(a.length==this.bits.length)){
+			throw new TamanhosDiferentesException("Conjuntos com tamanhos diferentes, impossivel calcular.");
+			
+		}else{
 			boolean [] or = new boolean[a.length];
 			for(int k=0;k<a.length;k++){
 				if(a[k]==true||this.bits[k]==true){
@@ -85,8 +90,9 @@ public class Bits {
 				}
 			}
 			this.bits = or;
-			}
-		throw new TamanhosDiferentesException("Conjuntos com tamanhos diferentes, impossivel calcular.");
+		}
+		
+		
 	}
 	public void not(boolean[] a){
 		boolean [] b = new boolean[a.length];
