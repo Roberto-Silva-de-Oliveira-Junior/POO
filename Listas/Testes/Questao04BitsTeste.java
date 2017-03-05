@@ -50,10 +50,9 @@ public class Questao04BitsTeste {
 
 	@Test
 	public void testNot() {
-		boolean [] bits2 = new boolean[]{true,true};
-		bits.not(bits2);
+		bits.not();
 		Bits teste = new Bits(2);
-		boolean [] expect = new boolean[]{false,false};
+		boolean [] expect = new boolean[]{true,false};
 		teste.setBits(expect);
 		assertEquals(teste.toString(),bits.toString());
 		

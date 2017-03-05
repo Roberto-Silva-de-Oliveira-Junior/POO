@@ -32,7 +32,7 @@ public class Ponto {
 		return false;
 	}
 	public String toString(){
-		return "X = "+this.x+"\nY = "+this.y; 
+		return "\nX = "+this.x+" Y = "+this.y; 
 	}
 	
 	

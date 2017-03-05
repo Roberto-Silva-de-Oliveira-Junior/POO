@@ -1,6 +1,6 @@
 package Questao09;
 
-public class Teste2 {
+public class MainTestaQuestao09 {
 
 	public static void main(String[] args) {
 		Retangulo r1 = new Retangulo(2,2,4,4);

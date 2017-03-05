@@ -30,8 +30,7 @@ public class Questao03PoligonoTeste {
 	@Test
 	public void testRemovePonto() {
 		p.adicionaPonto(2,3);
-		Ponto ponto = new Ponto(2,3);
-		Assert.assertTrue((p.removePonto(ponto)));
+		Assert.assertTrue((p.removePonto(2.0,3.0)));
 	}
 	
 	@Test
@@ -45,11 +44,10 @@ public class Questao03PoligonoTeste {
 
 	@Test
 	public void testAreaDoPoligono() {
-		p.adicionaPonto(2,3);
-		p.adicionaPonto(2,6);
 		p.adicionaPonto(3,4);
-		p.adicionaPonto(10, 20);
-		Assert.assertEquals(8,p.areaDoPoligono(),0.01);
+		p.adicionaPonto(5,7);
+		
+		Assert.assertEquals(1,p.areaDoPoligono(),0.01);
 	}
 
 }

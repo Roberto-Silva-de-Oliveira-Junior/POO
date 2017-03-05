@@ -1,16 +1,15 @@
 package Questao01;
 
-public class MainQuestao01 {
+public class MainTestaQuestao01 {
 
 	public static void main(String[] args) {
 		Retangulo r1 = new Retangulo();
 		Retangulo r2 = new Retangulo(2,5);
-		igualdade(r1,r2);
 		System.out.println("Retangulo 1\n"+r1.toString()+"\nRetangulo 2\n"+r2.toString());
 		r1.setLargura(2);
 		r1.setAltura(5);
 		System.out.println("Novas dimenções do primeiro retangulo :"+
-		r1.getAltura()+"X"+r1.getLargura());
+		r1.getAltura()+" X "+r1.getLargura());
 		igualdade(r1,r2);
 		System.out.println("Perimetros:"+"\nRetangulo 1: "+r1.calculaPerimetro()+
 		"\nRetangulo 2: "+r2.calculaPerimetro()+"\nÁrea:"+"\nRetangulo 1: "+r1.calulaArea()

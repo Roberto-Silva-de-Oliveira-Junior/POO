@@ -8,6 +8,5 @@ public abstract class Pessoa {
 		this.nome=nome;
 		this.nascimento=nascimento;
 	}
-	
 	public abstract void imprimeDados();
 }

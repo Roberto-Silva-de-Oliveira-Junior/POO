@@ -7,6 +7,21 @@ public class Pessoa {
 	private double peso;
 	private String sexo;
 	
+	public Pessoa(){
+		this.nome="";
+		this.idade=0;
+		this.altura=0;
+		this.peso=0;
+		this.sexo="";
+	}
+	public Pessoa(String nome, int idade, double altura, 
+			double peso, String sexo){
+		this.nome=nome;
+		this.idade=idade;
+		this.altura=altura;
+		this.peso=peso;
+		this.sexo=sexo;	
+	}
 	public double calculaIMC(){
 		return (this.peso/(this.altura*this.altura));
 	}
@@ -23,15 +38,6 @@ public class Pessoa {
 		}
 		return "Nome :"+this.nome+"\nDescrição da categoria:"+status;
 	}
-	public Pessoa(String nome, int idade, double altura, 
-			double peso, String sexo){
-		this.nome=nome;
-		this.idade=idade;
-		this.altura=altura;
-		this.peso=peso;
-		this.sexo=sexo;	
-	}
-
 	public String getNome() {
 		return nome;
 	}

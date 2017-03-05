@@ -3,7 +3,7 @@ package Questao08;
 public class TestaCadastro {
 	public static void main(String[] args) {
 
-		Data d1 = new Data(21, 07, 1997);
+		Data d1 = new Data(01, 07, 07);
 		Cliente c1 = new Cliente("zé", d1, 1);
 		Data d2 = new Data(22, 07, 1998);
 		Cliente c2 = new Cliente("Maria", d2, 2);

@@ -1,9 +1,9 @@
 package Questao08;
 
 import java.util.ArrayList;
-
+import java.util.List;
 public class CadastroPessoas  {
-	protected ArrayList<Pessoa> pessoas;
+	private List<Pessoa> pessoas;
 	
 	public CadastroPessoas(){
 		pessoas = new ArrayList<Pessoa>();

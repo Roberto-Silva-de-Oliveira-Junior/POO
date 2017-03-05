@@ -94,12 +94,12 @@ public class Bits {
 		
 		
 	}
-	public void not(boolean[] a){
-		boolean [] b = new boolean[a.length];
-		for(int k=0;k<a.length;k++){
-			if(a[k]==true){
+	public void not(){
+		boolean [] b = new boolean[this.bits.length];
+		for(int k=0;k<this.bits.length;k++){
+			if(this.bits[k]==true){
 				b[k]=false;
-			}else if(a[k]==false){
+			}else if(this.bits[k]==false){
 				b[k]=true;
 			}
 		}
