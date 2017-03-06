@@ -49,8 +49,6 @@ public class Questao03PoligonoTeste {
 		p.adicionaPonto(1,-1);
 		p.adicionaPonto(-1,-1);
 		p.adicionaPonto(-1,1);
-		
-		
 		Assert.assertEquals(1,Math.abs(p.areaDoPoligono()),0.01);
 	}
 
