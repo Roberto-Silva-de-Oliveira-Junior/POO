@@ -16,25 +16,26 @@ public class Questao03PoligonoTeste {
 		p = new Poligono();
 	}
 
-	@Test(expected = PontoJaExisteException.class)
-	public void testAdcionaPonto() throws Exception {
+	@Test//(expected = PontoJaExisteException.class)
+	public void testAdcionaPonto() throws PontoJaExisteException  {
 		p.adicionaPonto(2,3);
-		Ponto ponto = new Ponto(2,3);
+		/**Ponto ponto = new Ponto(2,3);
 		for(Ponto p3: p.acessaConjuntoDePontos()){
 			if(p3.getX() == ponto.getX() && p3.getY() == ponto.getY()){
 				throw new PontoJaExisteException("Ponto já existe,impossivel adicionar.");
 			}
 		}
+		**/
 	}
 	
 	@Test
-	public void testRemovePonto() {
+	public void testRemovePonto() throws PontoJaExisteException {
 		p.adicionaPonto(2,3);
 		Assert.assertTrue((p.removePonto(2.0,3.0)));
 	}
 	
 	@Test
-	public void testAcessaConjuntoDePontos() {
+	public void testAcessaConjuntoDePontos() throws PontoJaExisteException {
 		ArrayList<Ponto> ad = new ArrayList<Ponto>();
 		Ponto p1 = new Ponto(2,3);
 		ad.add(p1);
@@ -43,11 +44,14 @@ public class Questao03PoligonoTeste {
 	}
 
 	@Test
-	public void testAreaDoPoligono() {
-		p.adicionaPonto(3,4);
-		p.adicionaPonto(5,7);
+	public void testAreaDoPoligono() throws PontoJaExisteException {
+		p.adicionaPonto(1,1);
+		p.adicionaPonto(1,-1);
+		p.adicionaPonto(-1,-1);
+		p.adicionaPonto(-1,1);
 		
-		Assert.assertEquals(1,p.areaDoPoligono(),0.01);
+		
+		Assert.assertEquals(1,Math.abs(p.areaDoPoligono()),0.01);
 	}
 
 }
