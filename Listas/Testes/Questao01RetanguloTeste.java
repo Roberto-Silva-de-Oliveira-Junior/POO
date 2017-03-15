@@ -2,7 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import Questao01.Retangulo;
+import questao01.Retangulo;
 
 public class Questao01RetanguloTeste {
 	

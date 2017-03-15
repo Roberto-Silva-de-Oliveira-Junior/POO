@@ -3,10 +3,10 @@ import static org.junit.Assert.assertEquals;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Questao09.Circulo;
-import Questao09.FormasGeometricas;
-import Questao09.Quadrado;
-import Questao09.Retangulo;
+import questao09.Circulo;
+import questao09.FormasGeometricas;
+import questao09.Quadrado;
+import questao09.Retangulo;
 
 public class Questao09FormasGeometricasTeste {
 	static FormasGeometricas q1;

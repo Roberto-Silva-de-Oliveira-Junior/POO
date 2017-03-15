@@ -3,9 +3,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import Questao08.Data;
-import Questao08.Funcionario;
-import Questao08.Gerente;
+import questao08.Data;
+import questao08.Funcionario;
+import questao08.Gerente;
 
 public class Questao08FuncionarioTeste {
 	Data data;

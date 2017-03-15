@@ -3,8 +3,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import Questao04.Bits;
-import Questao04.TamanhosDiferentesException;
+import questao04.Bits;
+import questao04.TamanhosDiferentesException;
 
 
 public class Questao04BitsTeste {

@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import Questao03.Poligono;
-import Questao03.Ponto;
-import Questao03.PontoJaExisteException;
+import questao03.Poligono;
+import questao03.Ponto;
+import questao03.PontoJaExisteException;
 
 
 public class Questao03PoligonoTeste {

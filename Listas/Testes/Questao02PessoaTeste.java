@@ -2,7 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import Questao02.Pessoa;
+import questao02.Pessoa;
 
 public class Questao02PessoaTeste {
 	Pessoa p;
