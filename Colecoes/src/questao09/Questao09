@@ -1,0 +1,7 @@
+Quando utilizamos TreeSet, qual método somos obrigados a implementar para que
+nosso programa não lance uma exceção? Explique como se dá essa implementação.
+
+O método compareTo da interface Comparable, através deste método que diremos como 
+o TreeSet deve ordenar nosso Objeto em questão, a implementação se da retornando inteiros,
+em uma TreeSet de inteiros, o  compareTo pode ensinar ela deve comparar cada inteiro, quando 
+for igual retornar 0, quando menor -1, e quando maior 1. 

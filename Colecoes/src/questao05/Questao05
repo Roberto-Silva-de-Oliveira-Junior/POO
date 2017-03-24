@@ -1,0 +1,9 @@
+Como funcionam os seguintes métodos (remove(Object), indexOf(Object) e
+contains(Object)) nas Listas de maneira geral? Ele requer a implementação de qual
+método?
+
+O remove remove uma única instância do elemento especificado, se estiver presente, 
+o indexOf Retorna o índice da primeira ocorrência do elemento especificado nesta lista ou -1 se 
+este não contém o elemento, o contains retorna o valor lógico verdadeiro se a esta lista contém o 
+elemento especificado. Eles requererem a implementação do método eguals.
+

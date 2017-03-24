@@ -1,0 +1,13 @@
+Quais as diferenças de HashTable, LinkedHashMap, HashMap e TreeMap?
+
+Hashtable é sincronizado, em contraste com HashMap. Tem uma sobrecarga para sincronização.
+
+LinkedHashMap preserva a ordem de inserção.
+
+HashMap é implementado como uma tabela de hash, e não há ordenação em chaves ou valores.
+
+TreeMap é implementado com base na estrutura de árvore rubro negra, e é ordenado pela chave.
+
+
+
+

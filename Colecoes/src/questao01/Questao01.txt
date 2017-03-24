@@ -1,0 +1,5 @@
+O que é uma Lista?
+
+É uma coleção de elementos arrumados numa ordem linear, isto é,
+onde cada elemento tem um antecessor (exceto o primeiro) e um 
+sucessor (exceto o último).

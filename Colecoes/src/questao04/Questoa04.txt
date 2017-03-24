@@ -1,0 +1,29 @@
+Quais as diferenças de ArrayList, Vector e LinkedList? Explique vantagens e desvantagens de cada um. 
+
+-> ArrayList e LinkedList não remove os elementos duplicados, já Vector remove.
+-> O vector é sincronizado e o ArrayList não.
+-> O ArrayList aumenta 50% do seu tamanho quando a lista está cheia, já o vector 100%.
+-> A sua principal diferença entre LinkedList o ArrayList e Vector é na performance entre os métodos 
+add, remove, get e set. 
+
+>Vantagens 
+>>ArrayList
+Crescimento dinamico.
+Permite que elementos sejam acessados diretamente pelos métodos get()
+e set(), e adicionados através de add() e remove().
+São fracamente tipados, ou seja, podem ou não ser de um único tipo.
+>>Vector
+É sincronizado.
+Quando é nescessario aumentar a quantidade de elementos com muita frequência ele é mais indicado
+por dobrar o tamanho no seu redimensionamento.
+>>LinkedList
+Possui melhor performance nos métodos add e remove, do que os métodos add e remove do ArrayList.
+
+
+>Desvantagens
+>>ArrayList
+Não são sincronizados
+>>Vector
+A sincronização de suas funções o torna lento.
+>>LinkedList
+Seus métodos get e set possuem uma performance pior do que os do ArrayList.

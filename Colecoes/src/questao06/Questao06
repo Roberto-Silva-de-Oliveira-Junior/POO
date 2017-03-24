@@ -1,0 +1,4 @@
+É correto remover um elemento de uma lista enquanto você itera nessa lista através de
+um for ou um for-each? Quais as consequências disso? Como resolver?
+
+Não,o tamanho do arrayList diminui e o for fica inconsistente, o problema é resolvido usando o Iterator.

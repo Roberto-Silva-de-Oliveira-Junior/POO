@@ -1,0 +1,12 @@
+O que são classes abstratas e interface em Java.
+Quando devemos usar uma classe abstrata ou interface em Java?
+
+R: Classes abstratas são como modelos para as classes concretas(não abstratas), 
+elas podem conter ou não métodos abstratos, que tem a mesma definição da assina-
+tura de métodos encontrados nas interfaces. Uma interface é um recurso da 
+orientação a objetos usado para definir ações que devem obrigatorimente ser 
+executadas (todos os métodos devem ser abstratos), porém cada classe que as 
+usa pode executa-las de formas diferentes. 
+Quando se tem que definir variáveis, constantes, regras, e pequenas ações definidas
+devemos usar classes abstratas. Porém, se necessitamos apenas criar a forma como 
+objetos devem realizar determinadas ações (métodos) devemos optar por interfaces.

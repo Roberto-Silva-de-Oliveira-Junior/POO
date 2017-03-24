@@ -1,0 +1,3 @@
+O que é um Conjunto?
+
+Um conjunto é uma coleção que não possui elementos duplicados.
