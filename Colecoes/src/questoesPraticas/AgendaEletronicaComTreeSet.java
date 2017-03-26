@@ -6,28 +6,28 @@ import java.util.List;
 import java.util.TreeSet;
 
 public class AgendaEletronicaComTreeSet{
-	private TreeSet<Contato> treeListaDeContatos;
+	private TreeSet<Contato> treeSetDeContatos;
 	
 	public TreeSet<Contato> getContatos(){
-		return this.treeListaDeContatos;
+		return this.treeSetDeContatos;
 	}
 	public AgendaEletronicaComTreeSet(){
-		treeListaDeContatos = new TreeSet<Contato>();
+		treeSetDeContatos = new TreeSet<Contato>();
 	}
 	public void addContato(Contato c){
-		treeListaDeContatos.add(c);
+		treeSetDeContatos.add(c);
 	}
 	public boolean removerContato(Contato c){
-		for(Contato contatos: treeListaDeContatos){
+		for(Contato contatos: treeSetDeContatos){
 			if(contatos.compareTo(c)==0){
-				treeListaDeContatos.remove(c);
+				treeSetDeContatos.remove(c);
 				return true;
 			}
 		}
 		return false;
 	}
 	public void removerContato(String id){
-		Iterator <Contato> i = treeListaDeContatos.iterator();
+		Iterator <Contato> i = treeSetDeContatos.iterator();
 		while(i.hasNext()){
 			Contato a = i.next();
 			if(a.getNome().toUpperCase().contains(id.toUpperCase())){
@@ -36,7 +36,7 @@ public class AgendaEletronicaComTreeSet{
 		}
 	}
 	public List<Contato> listarContatos(String id){
-		Iterator <Contato> i = treeListaDeContatos.iterator();
+		Iterator <Contato> i = treeSetDeContatos.iterator();
 		List<Contato> contatosListados = new ArrayList<Contato>();
 		while(i.hasNext()){
 			Contato a = i.next();
