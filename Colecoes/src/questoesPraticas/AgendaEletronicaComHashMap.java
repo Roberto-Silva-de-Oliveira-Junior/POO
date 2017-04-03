@@ -8,13 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class AgendaEletronicaComHashMap {
-	Map<Integer,Contato>hashMapDeContatos;
+	private Map<Integer,Contato>hashMapDeContatos;
 
-	public Collection<Contato> getContatos(){
-		return this.hashMapDeContatos.values();
-	}
+	
 	public AgendaEletronicaComHashMap(){
 		hashMapDeContatos = new HashMap<Integer, Contato>();
+	}
+	public Collection<Contato> getContatos(){
+		return this.hashMapDeContatos.values();
 	}
 	public void addContato(Contato c){
 		hashMapDeContatos.put(c.getNumero(),c);

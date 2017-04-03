@@ -5,6 +5,9 @@ public class Contato implements Comparable<Contato>{
 	private int numero;
 	private String email;
 	
+	public int hashCode(){
+		return this.numero;
+	}
 	public Contato(String nome, int numero, String email){
 		this.nome=nome;
 		this.numero=numero;
