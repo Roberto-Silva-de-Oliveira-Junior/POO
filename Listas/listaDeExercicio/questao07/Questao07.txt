@@ -1,6 +1,0 @@
-Qual a diferença entre herança e composição em Java?
-
-R: Na composição podemos mudar a associação entre 
-classes em tempo de execução, assim um objeto pode assumir
-mais de um comportamento, já com a herança não podemos, 
-quando for copilado não poderá ser alterado.

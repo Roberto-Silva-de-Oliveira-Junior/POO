@@ -1,8 +1,0 @@
-Qual a diferença entre sobreposição e sobrecarga de metodos em Java ?
-
-R: A sobreposição é quando mudamos a implementação de um método 
-de uma super classe em uma sub classe mantendo o mesmo nome e a mesma 
-assinatura, já a sobrecarga é quando criamos métodos em uma única classe, 
-com mesmo nome, mas com assinaturas diferentes, como por exemplo a 
-quantidade de parâmetros recebidos nas varias possibilidades de declaração 
-de um construtor. 
