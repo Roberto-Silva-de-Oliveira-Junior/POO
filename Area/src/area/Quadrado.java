@@ -1,4 +1,4 @@
-package Area;
+package area;
 
 public class Quadrado  implements AreaCalculavel {
 	private double lado;

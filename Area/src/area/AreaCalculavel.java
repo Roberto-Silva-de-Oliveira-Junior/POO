@@ -1,4 +1,4 @@
-package Area;
+package area;
 
 public interface AreaCalculavel {
 	double calculaArea();

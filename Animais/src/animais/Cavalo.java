@@ -1,4 +1,4 @@
-package Animais;
+package animais;
 
 public class Cavalo extends Animal{
 	public Cavalo(String nome, int idade){

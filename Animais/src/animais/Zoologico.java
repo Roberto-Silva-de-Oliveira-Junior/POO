@@ -1,4 +1,4 @@
-package Animais;
+package animais;
 
 public class Zoologico  {
 

@@ -1,4 +1,4 @@
-package Area;
+package area;
 public class Calculando {
 	public static void main(String[]args){
 		AreaCalculavel[] ac = new AreaCalculavel[]{new Quadrado(5.0), new Retangulo(2.0,4.0), 

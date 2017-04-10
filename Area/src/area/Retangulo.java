@@ -1,4 +1,4 @@
-package Area;
+package area;
 
 public class Retangulo implements AreaCalculavel {
 	private double altura;

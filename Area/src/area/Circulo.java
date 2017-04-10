@@ -1,4 +1,4 @@
-package Area;
+package area;
 
 public class Circulo implements AreaCalculavel {
 	private double raio;
