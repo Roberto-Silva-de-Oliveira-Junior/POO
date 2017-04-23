@@ -1,32 +1,35 @@
-package questoesPraticas;
+package agendaEletronicaTreeSet;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.TreeSet;
 
-public class AgendaEletronica {
-	private List<Contato> listaDeContatos;
+import agendaEletronicaTreeSet.Contato;
+
+public class AgendaEletronicaComTreeSet{
+	private TreeSet<Contato> treeSetDeContatos;
 	
-	public List<Contato> getContatos(){
-		return this.listaDeContatos;
+	public TreeSet<Contato> getContatos(){
+		return this.treeSetDeContatos;
 	}
-	public AgendaEletronica(){
-		listaDeContatos = new ArrayList<Contato>();
+	public AgendaEletronicaComTreeSet(){
+		treeSetDeContatos = new TreeSet<Contato>();
 	}
 	public void addContato(Contato c){
-		listaDeContatos.add(c);
+		treeSetDeContatos.add(c);
 	}
 	public boolean removerContato(Contato c){
-		for(Contato contatos: listaDeContatos){
-			if(contatos.equals(c)){
-				listaDeContatos.remove(c);
+		for(Contato contatos: treeSetDeContatos){
+			if(contatos.compareTo(c)==0){
+				treeSetDeContatos.remove(c);
 				return true;
 			}
 		}
 		return false;
 	}
 	public void removerContato(String id){
-		Iterator <Contato> i = listaDeContatos.iterator();
+		Iterator <Contato> i = treeSetDeContatos.iterator();
 		while(i.hasNext()){
 			Contato a = i.next();
 			if(a.getNome().toUpperCase().contains(id.toUpperCase())){
@@ -35,7 +38,7 @@ public class AgendaEletronica {
 		}
 	}
 	public List<Contato> listarContatos(String id){
-		Iterator <Contato> i = listaDeContatos.iterator();
+		Iterator <Contato> i = treeSetDeContatos.iterator();
 		List<Contato> contatosListados = new ArrayList<Contato>();
 		while(i.hasNext()){
 			Contato a = i.next();
@@ -45,6 +48,6 @@ public class AgendaEletronica {
 		}
 		return contatosListados;
 	}
-	
-	}
 
+
+}

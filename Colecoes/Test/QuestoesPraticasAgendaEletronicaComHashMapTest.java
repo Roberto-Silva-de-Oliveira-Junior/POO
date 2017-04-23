@@ -1,30 +1,32 @@
-import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import questoesPraticas.AgendaEletronicaComTreeSet;
-import questoesPraticas.Contato;
+import agendaEletronicaComHashMap.AgendaEletronicaComHashMap;
+import agendaEletronicaComHashMap.Contato;
 
-public class questoesPraticasAgendaEletronicaComTreeSetTest {
+
+
+
+public class QuestoesPraticasAgendaEletronicaComHashMapTest {
 	Contato c1;
 	Contato c2;
 	Contato c3;
-	AgendaEletronicaComTreeSet agenda;
+	AgendaEletronicaComHashMap agenda;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new Contato("Zé",01010101,"Zezinho@gmail.com");
-		c2 = new Contato("Zefa",02020202,"Zefinha@gmail.com");
-		agenda = new AgendaEletronicaComTreeSet();
-		agenda.addContato(c1);
-		agenda.addContato(c2);
-		
+		c1 = new Contato(01010101,"Zezinho@gmail.com");
+		c2 = new Contato(02020202,"Zefinha@gmail.com");
+		agenda = new AgendaEletronicaComHashMap();
+		agenda.addContato("Zé",c1);
+		agenda.addContato("Zefa",c2);
 	}
 	@Test
 	public void testAddContato() {
-		c3 = new Contato("Antônio",03030303,"Toin@gmail.com");
-		agenda.addContato(c3);
+		c3 = new Contato(03030303,"Toin@gmail.com");
+		agenda.addContato("Toin",c3);
 		assertEquals(3,agenda.getContatos().size());
 	}
 
@@ -32,6 +34,7 @@ public class questoesPraticasAgendaEletronicaComTreeSetTest {
 	public void testRemoverContatoContato() {
 		assertTrue(agenda.removerContato(c2));
 	}
+
 	@Test
 	public void testRemoverContatoString() {
 		agenda.removerContato("Z");

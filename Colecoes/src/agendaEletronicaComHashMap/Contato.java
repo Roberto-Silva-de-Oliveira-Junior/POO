@@ -1,20 +1,12 @@
-package questoesPraticas;
+package agendaEletronicaComHashMap;
 
-public class Contato implements Comparable<Contato>{
-	private String nome;
+public class Contato {
 	private int numero;
 	private String email;
 	
-	public int hashCode(){
-		return this.numero;
-	}
-	public Contato(String nome, int numero, String email){
-		this.nome=nome;
+	public Contato(int numero, String email){
 		this.numero=numero;
 		this.email=email;
-	}
-	public int compareTo(Contato cont){
-		return this.nome.compareTo(cont.nome);
 	}
 	public boolean equals(Object obj) {
 		if (obj == null) {
@@ -22,22 +14,13 @@ public class Contato implements Comparable<Contato>{
 		} else {
 			if (obj instanceof Contato) {
 				Contato a = (Contato) obj;
-				if (a.getEmail().equals(this.email) && a.getNome().equals(this.nome) && a.getNumero() == this.numero) {
+				if (a.getEmail().equals(this.email) &&a.getNumero() == this.numero) {
 					return true;
 				}
 			}
 			return false;
 		}
 	}	
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public int getNumero() {
 		return numero;
 	}

@@ -1,36 +1,32 @@
-package questoesPraticas;
+package agendaEletronica;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-public class AgendaEletronicaComHashMap {
-	private Map<Integer,Contato>hashMapDeContatos;
-
+public class AgendaEletronica {
+	private List<Contato> listaDeContatos;
 	
-	public AgendaEletronicaComHashMap(){
-		hashMapDeContatos = new HashMap<Integer, Contato>();
+	public List<Contato> getContatos(){
+		return this.listaDeContatos;
 	}
-	public Collection<Contato> getContatos(){
-		return this.hashMapDeContatos.values();
+	public AgendaEletronica(){
+		listaDeContatos = new ArrayList<Contato>();
 	}
 	public void addContato(Contato c){
-		hashMapDeContatos.put(c.getNumero(),c);
+		listaDeContatos.add(c);
 	}
 	public boolean removerContato(Contato c){
-		for(Contato value: hashMapDeContatos.values()){
-			if(value.equals(c)){
-				hashMapDeContatos.remove(c);
+		for(Contato contatos: listaDeContatos){
+			if(contatos.equals(c)){
+				listaDeContatos.remove(c);
 				return true;
 			}
 		}
 		return false;
 	}
 	public void removerContato(String id){
-		Iterator <Contato> i = hashMapDeContatos.values().iterator();
+		Iterator <Contato> i = listaDeContatos.iterator();
 		while(i.hasNext()){
 			Contato a = i.next();
 			if(a.getNome().toUpperCase().contains(id.toUpperCase())){
@@ -39,7 +35,7 @@ public class AgendaEletronicaComHashMap {
 		}
 	}
 	public List<Contato> listarContatos(String id){
-		Iterator <Contato> i = hashMapDeContatos.values().iterator();
+		Iterator <Contato> i = listaDeContatos.iterator();
 		List<Contato> contatosListados = new ArrayList<Contato>();
 		while(i.hasNext()){
 			Contato a = i.next();
@@ -49,5 +45,6 @@ public class AgendaEletronicaComHashMap {
 		}
 		return contatosListados;
 	}
+	
+	}
 
-}

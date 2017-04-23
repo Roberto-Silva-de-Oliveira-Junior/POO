@@ -1,24 +1,27 @@
- import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import questoesPraticas.AgendaEletronicaComHashMap;
-import questoesPraticas.Contato;
+import agendaEletronica.AgendaEletronica;
+import agendaEletronica.Contato;
 
-public class questoesPraticasAgendaEletronicaComHashMapTest {
+public class QuestoesPraticasAgendaEletronicaTest {
 	Contato c1;
 	Contato c2;
 	Contato c3;
-	AgendaEletronicaComHashMap agenda;
+	AgendaEletronica agenda;
+
 	@Before
 	public void setUp() throws Exception {
 		c1 = new Contato("Zé",01010101,"Zezinho@gmail.com");
 		c2 = new Contato("Zefa",02020202,"Zefinha@gmail.com");
-		agenda = new AgendaEletronicaComHashMap();
+		agenda = new AgendaEletronica();
 		agenda.addContato(c1);
 		agenda.addContato(c2);
+		
 	}
+	
 	@Test
 	public void testAddContato() {
 		c3 = new Contato("Antônio",03030303,"Toin@gmail.com");
