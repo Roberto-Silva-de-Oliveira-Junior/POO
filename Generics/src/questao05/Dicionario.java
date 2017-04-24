@@ -6,6 +6,8 @@ import java.util.List;
 public class Dicionario <K,V>{
 	private List<K> l1;
 	private List<V> l2;
+	protected int qtdeDeElementos;
+
 	
 	public Dicionario(){
 		l1 = new ArrayList<K>();
@@ -23,6 +25,9 @@ public class Dicionario <K,V>{
 		}
 		return null;
 	}
-	
+	public int getQtdeDeElementos(){
+		return l2.size();
+	}
+
 
 }
