@@ -1,6 +1,6 @@
 package sistemaBancario;
 
-public class Senha {
+public class Senha implements Comparable <Senha>{
 	private String nome;
 	private int idade;
 	private int cpf;
@@ -9,7 +9,26 @@ public class Senha {
 		this.idade = idade;
 		this.cpf = cpf;
 	}
-	
+	public boolean equals(Object obj){
+		if(obj==null){
+			return false;
+		}else if(obj instanceof Senha){
+			Senha s = (Senha) obj;
+			if(this.cpf==s.cpf){
+				return true;
+			}
+		}
+		return false;
+	}
+	public int compareTo(Senha s){
+			if(this.idade==s.getIdade()){
+				return 0;
+			}else if(this.idade<s.getIdade()){
+				return 1;
+			}else{
+				return -1;
+			}
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -27,5 +46,8 @@ public class Senha {
 	}
 	public void setCpf(int cpf) {
 		this.cpf = cpf;
+	}
+	public String toString(){
+		return "Nome :"+this.getNome()+"\nIdade :"+this.idade+"\nCPF :"+this.cpf;
 	}
 }
