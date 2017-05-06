@@ -1,7 +1,10 @@
-Quando utilizamos TreeSet, qual método somos obrigados a implementar para que
-nosso programa não lance uma exceção? Explique como se dá essa implementação.
+Me explique com suas palavras como funciona as estruturas que usam hash. O que é um
+código hash? (se for mais fácil de explicar pode usar o exemplo da portaria e caixa de
+correspondências)
 
-O método compareTo da interface Comparable, através deste método que diremos como 
-o TreeSet deve ordenar nosso Objeto em questão, a implementação se da retornando inteiros,
-em uma TreeSet de inteiros, o  compareTo pode ensinar ela deve comparar cada inteiro, quando 
-for igual retornar 0, quando menor -1, e quando maior 1. 
+Estruturas que usam hash criam endereços para categorizar espaços de memoria, se deve usar critérios mais 
+individualistas para que assim seja feita uma seleção mais rigorosa, logo haverá menos elementos em cada 
+seção tornando o processo de busca mais rapido, e como nos conjuntos não é permitido elementos repetidos.
+Como por exemplo uma caixa de correspondências de um prédio, o código hash (número de cada apartamento) ajuda 
+o porteiro a achar mais rápido em qual gaveta cada correspondecia deve ser colocada, e aqui tambem não se admite 
+elementos repetidos.

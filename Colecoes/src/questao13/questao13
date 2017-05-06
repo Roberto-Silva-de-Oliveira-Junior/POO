@@ -1,0 +1,2 @@
+Que cuidado deve ser tomado para que uma PriorityQueue funcione corretamente?
+CompareTo deve estar implementado de forma correta.
