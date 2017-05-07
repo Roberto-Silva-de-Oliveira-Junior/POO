@@ -1,3 +1,3 @@
 O que é uma Fila?
 É uma estrutura de dados do tipo FIFO: “o primeiro elemento que entra é o primeiro que sai” (first in, first out ).
-A idéia fundamental da fila é que só podemos inserir um novo elemento no final da fila e só podemos retirar o elemento no inicio.
+A idéia fundamental da fila é que só podemos inserir um novo elemento no final dela e só podemos retirar o elemento do inicio.
