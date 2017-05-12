@@ -34,7 +34,7 @@ public class AgendaEletronicaComHashMap {
 		Iterator<String> i = hashMapDeContatos.keySet().iterator();
 		while (i.hasNext()) {
 			String a = i.next();
-			if (a.contains(id.toUpperCase())) {
+			if (a.toUpperCase().contains(id.toUpperCase())) {
 				i.remove();
 			}
 		}

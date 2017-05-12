@@ -14,7 +14,7 @@ public class Contato {
 		} else {
 			if (obj instanceof Contato) {
 				Contato a = (Contato) obj;
-				if (a.getEmail().equals(this.email) &&a.getNumero() == this.numero) {
+				if (a.getEmail().equals(this.email) && a.getNumero() == this.numero) {
 					return true;
 				}
 			}
