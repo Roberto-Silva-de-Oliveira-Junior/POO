@@ -1,89 +1,64 @@
 package Projeto;
 
-import java.io.IOException;
-import java.util.List;
+public class Cliente extends Pessoa{
 
-public class Cliente extends Pessoa {
-	private List<Treino> listaDeTreinos;
+	private Data dataDeInicio;
+	private Treino treino;
 	private String turno;
-	private Status estatos;
-
-	public Cliente(String nome, Idade idade, int rg, int cpf, List<Treino> listaDeTreinos, String turno,
-			Status estatos) {
-		super(nome, idade, rg, cpf);
-		this.listaDeTreinos = listaDeTreinos;
+	private boolean status;
+	private String profResp;
+	
+	public Cliente(String nome, String cpf, String rg, Contato contato, Data dataNascimento, Data dataDeInicio,
+			Treino treino, String turno, boolean status, String profResp) {
+		super(nome, cpf, rg, contato, dataNascimento);
+		this.dataDeInicio = dataDeInicio;
+		this.treino = treino;
 		this.turno = turno;
-		this.estatos = estatos;
+		this.status = status;
+		this.profResp = profResp;
 	}
-
-	public List<Treino> getListaDeTreinos() {
-		return listaDeTreinos;
+	public Data getDataDeInicio() {
+		return dataDeInicio;
 	}
-
-	public void setListaDeTreinos(List<Treino> listaDeTreinos) {
-		this.listaDeTreinos = listaDeTreinos;
+	public void setDataDeInicio(Data dataDeInicio) {
+		this.dataDeInicio = dataDeInicio;
 	}
-
+	public Treino getTreino() {
+		return treino;
+	}
+	public void setTreino(Treino treino) {
+		this.treino = treino;
+	}
 	public String getTurno() {
 		return turno;
 	}
-
 	public void setTurno(String turno) {
 		this.turno = turno;
 	}
-
-	public Status getEstatos() {
-		return estatos;
+	public boolean isStatus() {
+		return status;
 	}
-
-	public void setEstatos(Status estatos) {
-		this.estatos = estatos;
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
-
-	public String toString() {
-		return this.listaDeTreinos.toString() + " (" + this.turno + "," + this.estatos + ")";
+	public String getProfResp() {
+		return profResp;
 	}
-
-	public void addTreino(Treino t) throws IOException {
-		for (Treino b : this.listaDeTreinos) {
-			if (b.equals(t)) {
-				throw new IOException("Esse elemento ja foi cadastrado !!!");
-			}
-		}
-		this.listaDeTreinos.add(t);
+	public void setProfResp(String profResp) {
+		this.profResp = profResp;
 	}
-
-	public boolean removerTreino(String dia) {
-		for (Treino b : this.listaDeTreinos) {
-			if (b.getDia().equals(dia)) {
-				this.listaDeTreinos.remove(b);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public boolean alterarTreino(Treino t, String tipo, String dia, String descricao) {
-		for (Treino b : this.listaDeTreinos) {
-			if (b.equals(t)) {
-				b.setTipo(tipo);
-				b.setDia(dia);
-				b.setDescricao(descricao);
-				return true;
-			}
-		}
-		return false;
-	}
-
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((estatos == null) ? 0 : estatos.hashCode());
-		result = prime * result + ((listaDeTreinos == null) ? 0 : listaDeTreinos.hashCode());
+		result = prime * result + ((dataDeInicio == null) ? 0 : dataDeInicio.hashCode());
+		result = prime * result + ((profResp == null) ? 0 : profResp.hashCode());
+		result = prime * result + (status ? 1231 : 1237);
+		result = prime * result + ((treino == null) ? 0 : treino.hashCode());
 		result = prime * result + ((turno == null) ? 0 : turno.hashCode());
 		return result;
 	}
-
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -92,15 +67,22 @@ public class Cliente extends Pessoa {
 		if (getClass() != obj.getClass())
 			return false;
 		Cliente other = (Cliente) obj;
-		if (estatos == null) {
-			if (other.estatos != null)
+		if (dataDeInicio == null) {
+			if (other.dataDeInicio != null)
 				return false;
-		} else if (!estatos.equals(other.estatos))
+		} else if (!dataDeInicio.equals(other.dataDeInicio))
 			return false;
-		if (listaDeTreinos == null) {
-			if (other.listaDeTreinos != null)
+		if (profResp == null) {
+			if (other.profResp != null)
 				return false;
-		} else if (!listaDeTreinos.equals(other.listaDeTreinos))
+		} else if (!profResp.equals(other.profResp))
+			return false;
+		if (status != other.status)
+			return false;
+		if (treino == null) {
+			if (other.treino != null)
+				return false;
+		} else if (!treino.equals(other.treino))
 			return false;
 		if (turno == null) {
 			if (other.turno != null)
@@ -109,5 +91,7 @@ public class Cliente extends Pessoa {
 			return false;
 		return true;
 	}
+	
+	
 
 }

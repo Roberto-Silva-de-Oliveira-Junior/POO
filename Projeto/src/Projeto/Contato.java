@@ -1,39 +1,32 @@
 package Projeto;
 
 public class Contato {
-	private Telefone telefone;
+	private Telefone telefoe;
 	private String email;
-	private Endereco endereco;
-
-	public Contato(Telefone telefone, String email, Endereco endereco) {
+	public Contato(Telefone telefoe, String email, Endereco endereco) {
 		super();
-		this.telefone = telefone;
+		this.telefoe = telefoe;
 		this.email = email;
 		this.endereco = endereco;
 	}
-
-	public Telefone getTelefone() {
-		return telefone;
+	public Telefone getTelefoe() {
+		return telefoe;
 	}
-
-	public void setTelefone(Telefone telefone) {
-		this.telefone = telefone;
+	public void setTelefoe(Telefone telefoe) {
+		this.telefoe = telefoe;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public Endereco getEndereco() {
 		return endereco;
 	}
-
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-
+	private Endereco endereco;
+	
 }

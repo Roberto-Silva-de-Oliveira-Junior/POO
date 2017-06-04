@@ -1,0 +1,17 @@
+Vários objetos da classe A (vide abaixo) são utilizadas num programa multi-thread.
+O que ocorre quando outras threads utilizam o código abaixo?
+
+class A {
+static private int myCount =0;
+int yourNumber;
+	private static synchronized int nextCount(){
+		return ++myCount;
+	}
+	public void getYourNumber(){
+		yourNumber = nextCount();
+	}
+} 
+
+Resposta:
+
+b) Erro de execução

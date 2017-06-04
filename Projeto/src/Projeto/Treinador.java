@@ -1,25 +1,21 @@
 package Projeto;
 
-import java.io.IOException;
+
+import java.util.Iterator;
 import java.util.List;
 
-public class Treinador extends Funcionario {
+import javax.swing.JOptionPane;
 
-	private Controle controle;
+public class Treinador extends Funcionario {
+	private Acesso acesso;
 	private List<Cliente> listaDeClientes;
 
-	public Treinador(String nome, Idade idade, int rg, int cpf, Controle controle, List<Cliente> listaDeClientes) {
-		super(nome, idade, rg, cpf);
-		this.controle = controle;
-		this.listaDeClientes = controle.getClientes();
+	public Acesso getAcesso() {
+		return acesso;
 	}
 
-	public Controle getControle() {
-		return controle;
-	}
-
-	public void setControle(Controle controle) {
-		this.controle = controle;
+	public void setAcesso(Acesso acesso) {
+		this.acesso = acesso;
 	}
 
 	public List<Cliente> getListaDeClientes() {
@@ -30,82 +26,50 @@ public class Treinador extends Funcionario {
 		this.listaDeClientes = listaDeClientes;
 	}
 
-	public void cadastraClientes(Cliente c) throws IOException {
+	public Treinador(String nome, String cpf, String rg, Contato contato, Data dataNascimento, double salario,
+			String turno, String funcao, Acesso acesso, List<Cliente> listaDeClientes) {
+		super(nome, cpf, rg, contato, dataNascimento, salario, turno, funcao);
+		this.acesso = acesso;
+		this.listaDeClientes = listaDeClientes;
+	}
+
+	public boolean addCliente(Cliente c) {
 		for (Cliente a : this.listaDeClientes) {
 			if (a.equals(c)) {
-				throw new IOException("Cliente ja cadastrado !!!");
+				JOptionPane.showMessageDialog(null, "Cliente ja cadastrado !!!");
+				return false;
 			}
 		}
 		this.listaDeClientes.add(c);
-	}
-
-	public boolean removeClientes(Cliente c) {
-		for (Cliente a : this.listaDeClientes) {
-			if (a.equals(c)) {
-				this.listaDeClientes.remove(a);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public void addTreinoDoCliente(Cliente c, Treino t) throws IOException {
-		for (Cliente a : this.listaDeClientes) {
-			if (a.equals(c)) {
-				a.addTreino(t);
-			}
-		}
-
-	}
-
-	public boolean removerTreinoDoCliente(Cliente c, String dia) {
-		for (Cliente a : this.listaDeClientes) {
-			if (a.equals(c)) {
-				a.removerTreino(dia);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public double calculaSalario(double salario, List<CargaHoraria> horarioDeTrabalho) {
-		List<CargaHoraria> cargH = super.getHorarioDeTrabalho();
-		double horas = 0.0;
-		for (CargaHoraria a : cargH) {
-			horas += a.horasTrabalhadasNoDia();
-		}
-		return horas * super.getSalario();
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((controle == null) ? 0 : controle.hashCode());
-		result = prime * result + ((listaDeClientes == null) ? 0 : listaDeClientes.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Treinador other = (Treinador) obj;
-		if (controle == null) {
-			if (other.controle != null)
-				return false;
-		} else if (!controle.equals(other.controle))
-			return false;
-		if (listaDeClientes == null) {
-			if (other.listaDeClientes != null)
-				return false;
-		} else if (!listaDeClientes.equals(other.listaDeClientes))
-			return false;
+		JOptionPane.showMessageDialog(null, "Cliente cadastrado !!!");
 		return true;
+
+	}
+
+	public boolean removerCliente(String cpf) {
+		Iterator<Cliente> i = this.listaDeClientes.iterator();
+		while (i.hasNext()) {
+			Cliente a = i.next();
+			if (a.getCpf().equals(cpf)) {
+				i.remove();
+				JOptionPane.showMessageDialog(null, "Cliente removido !!!");
+				return true;
+			}
+		}
+		JOptionPane.showMessageDialog(null, "Cliente nao encrontrado !!!");
+		return false;
+	}
+
+	public Cliente pesquisarCliente(String cpf) {
+		for (Cliente c : listaDeClientes) {
+			if (c.getCpf().equals(cpf)) {
+				JOptionPane.showMessageDialog(null, "Cliente encontrado !!!");
+				return c;
+			}
+		}
+		JOptionPane.showMessageDialog(null, "Cliente nao encontrado !!!");
+		return null;
+
 	}
 
 }

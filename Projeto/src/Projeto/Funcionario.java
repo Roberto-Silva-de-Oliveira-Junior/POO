@@ -1,48 +1,34 @@
 package Projeto;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public abstract class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa {
 	private double salario;
-	private List<CargaHoraria> horarioDeTrabalho;
-
-	public Funcionario(String nome, Idade idade, int rg, int cpf) {
-		super(nome, idade, rg, cpf);
-		this.horarioDeTrabalho = new ArrayList<CargaHoraria>();
-		this.salario = 0.0;
+	private String turno;
+	private String funcao;
+	
+	public Funcionario(String nome, String cpf, String rg, Contato contato, Data dataNascimento, double salario,
+			String turno, String funcao) {
+		super(nome, cpf, rg, contato, dataNascimento);
+		this.salario = salario;
+		this.turno = turno;
+		this.funcao = funcao;
 	}
-
-	public void addHorasDia(CargaHoraria ch) {
-		this.horarioDeTrabalho.add(ch);
-	}
-
-	public boolean removerDia(String dia) {
-		for (CargaHoraria c : this.horarioDeTrabalho) {
-			if (c.getDia().equals(dia)) {
-				this.horarioDeTrabalho.remove(c);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public abstract double calculaSalario(double salario, List<CargaHoraria> horarioDeTrabalho);
-
 	public double getSalario() {
 		return salario;
 	}
-
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-
-	public List<CargaHoraria> getHorarioDeTrabalho() {
-		return horarioDeTrabalho;
+	public String getTurno() {
+		return turno;
 	}
-
-	public void setHorarioDeTrabalho(List<CargaHoraria> horarioDeTrabalho) {
-		this.horarioDeTrabalho = horarioDeTrabalho;
+	public void setTurno(String turno) {
+		this.turno = turno;
+	}
+	public String getFuncao() {
+		return funcao;
+	}
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
 	}
 
 }
