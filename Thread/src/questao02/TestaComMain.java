@@ -5,7 +5,6 @@ public class TestaComMain {
 		int soma=0;
 		int x = 1000;
 		int y = 1000;
-		int ind = x/10;
 		int[][] num = new int[x][y];
 	
 		for (int k = 0; k < num.length; k++) {
@@ -13,7 +12,7 @@ public class TestaComMain {
 				num[k][i] = 1;
 			}
 		}
-		ThreadSomadora t1 = new ThreadSomadora(ind-ind,x,num);
+		ThreadSomadora t1 = new ThreadSomadora(0,x,num);
 		Thread t11 = new Thread(t1);
 		t11.start();
 		try {
