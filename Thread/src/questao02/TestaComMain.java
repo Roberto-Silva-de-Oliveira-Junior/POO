@@ -13,7 +13,7 @@ public class TestaComMain {
 				num[k][i] = 1;
 			}
 		}
-		ThreadSomadora t1 = new ThreadSomadora(ind-ind,ind,num);
+		ThreadSomadora t1 = new ThreadSomadora(ind-ind,x,num);
 		Thread t11 = new Thread(t1);
 		t11.start();
 		try {

@@ -1,6 +1,6 @@
 package questao02;
 
-public class ThreadSomadora implements Runnable {
+public class ThreadSomadora implements Runnable{
 	private int inicio;
 	private int fim;
 	private int[][] num;
