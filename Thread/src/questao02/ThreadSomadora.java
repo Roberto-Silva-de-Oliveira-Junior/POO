@@ -13,7 +13,7 @@ public class ThreadSomadora implements Runnable{
 		soma=0;
 	}
 	public int getSoma(){
-		return this.soma;
+		return ThreadSomadora.soma;
 	}
 	@Override
 	public void run() {
