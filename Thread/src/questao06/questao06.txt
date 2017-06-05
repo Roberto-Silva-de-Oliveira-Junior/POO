@@ -1,2 +1,4 @@
+Se estiver levando em consideração a implementação estara errado, pois há a 
+falta da impleentção de Runnable ou extenção dethread.
 Uma thread espera o temino da execução da outra thread para só então iniciar 
 devido a presença da sincronização do metodo (tem o synchronized).

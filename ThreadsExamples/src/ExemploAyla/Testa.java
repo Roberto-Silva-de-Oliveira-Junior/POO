@@ -27,7 +27,7 @@ public class Testa {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		assertEquals(_________, con1.getUltimaPalavra());
+		assertEquals("", con1.getUltimaPalavra());
 		prod.desligar();
 		
 	}
